@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulk Actions for Salesforce — copy, move and delete reports in bulk</title>
+<meta name="description" content="A browser extension for Salesforce admins: copy, move, delete (with automatic backup and undo) and search many Salesforce reports at once.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&family=IBM+Plex+Mono:wght@600&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">BA</span>Bulk Actions for Salesforce</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary btn-sm" href="#pricing">Get started free</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">For Salesforce admins &amp; consultants</span>
+      <h1>Stop cloning reports <em>one at a time.</em></h1>
+      <p class="lead">Select 30 reports, click once. Copy, move, or delete them in bulk — with an automatic backup and a 30-second undo. Built for the Salesforce Lightning Reports page you already use.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#pricing">Start free — 10 reports/month</a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+      <p class="hero-note">Works in Chrome and Microsoft Edge. Signs in with Salesforce OAuth — we never see your password.</p>
+    </div>
+
+    <div class="mock" role="img" aria-label="The extension on the Salesforce Reports list: three reports selected and a bulk action bar with Copy, Move and Delete.">
+      <div class="mock-bar"><i></i><i></i><i></i></div>
+      <div class="mock-title">Reports<b>Recent</b></div>
+      <table>
+        <thead><tr><th>Report name</th><th>Folder</th></tr></thead>
+        <tbody>
+          <tr class="sel"><td><span class="chk on"></span>Pipeline by Region — EMEA</td><td>Sales Ops</td></tr>
+          <tr class="sel"><td><span class="chk on"></span>Pipeline by Region — APAC</td><td>Sales Ops</td></tr>
+          <tr class="sel"><td><span class="chk on"></span>Pipeline by Region — NA</td><td>Sales Ops</td></tr>
+          <tr><td><span class="chk"></span>Closed Won — Q3</td><td>Private Reports</td></tr>
+        </tbody>
+      </table>
+      <div class="mock-sel"><b>3 selected</b><span class="p">Copy</span><span>Move</span><span class="d">Delete</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div><b>1 click</b><span>instead of opening, “Save As”-ing and renaming every report</span></div>
+    <div><b>30 s undo</b><span>plus an automatic JSON backup before every delete</span></div>
+    <div><b>0 servers</b><span>your report data goes straight from your browser to Salesforce</span></div>
+  </div>
+</div>
+
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Features</span>
+      <h2>Everything you do to reports, done to many at once.</h2>
+      <p>Every action uses the official Salesforce Analytics REST API — not screen scraping — so it keeps working through Salesforce releases.</p>
+    </div>
+    <div class="features">
+      <article class="feat"><span class="tag">COPY</span><h3>Batch copy with smart names</h3><p>Clone many reports in one go. Name copies with a pattern like <code>{name} - Q4</code>; names stay within Salesforce’s 40-character limit and duplicates get “(2)”, “(3)” automatically.</p></article>
+      <article class="feat"><span class="tag">MOVE</span><h3>Batch move to any folder</h3><p>Pick a destination folder, move everything at once, and undo for 30 seconds if you picked the wrong one.</p></article>
+      <article class="feat"><span class="tag">DELETE</span><h3>Safe batch delete</h3><p>Clean up old reports with a JSON backup downloaded first, a 30-second undo, and a clear confirm step. Reports used on dashboards are skipped.</p></article>
+      <article class="feat"><span class="tag">SEARCH</span><h3>Typo-tolerant search</h3><p>Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd> anywhere in Salesforce. Finds “Pipeline” even when you type “pipline”. Filter by folder, creator and date.</p></article>
+      <article class="feat"><span class="tag">RESTORE</span><h3>Restore from backup</h3><p>Missed the undo window? Load a backup file and recreate the reports you need, with per-report results.</p></article>
+      <article class="feat"><span class="tag">PRIVATE</span><h3>Your data stays yours</h3><p>OAuth 2.0 with PKCE, tokens encrypted in your browser, no report data sent to us. English and Arabic interface.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:var(--card);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Set up once in about 10 minutes.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Install the extension</h3><p>Add it to Chrome or Edge from the Chrome Web Store.</p></div>
+      <div class="step"><h3>Connect your org</h3><p>Create a Salesforce External Client App (step-by-step guide included), paste its Consumer Key, and sign in with Salesforce.</p></div>
+      <div class="step"><h3>Select and act</h3><p>Open Reports in Lightning, tick the reports you want, and use the Copy, Move or Delete bar at the bottom of the page.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Pricing</span>
+      <h2>Free to try. One plan when it saves you hours.</h2>
+      <p>Prices in USD. Payments, invoices and sales tax are handled by our reseller, Lemon Squeezy.</p>
+    </div>
+    <div class="pricing">
+      <div class="plan">
+        <h3>Free</h3>
+        <div class="price">$0</div>
+        <ul>
+          <li>10 reports per month (copy, move or delete)</li>
+          <li>Unlimited Smart Search</li>
+          <li>Automatic backup &amp; undo</li>
+        </ul>
+        <a class="btn btn-ghost" href="#how">Get started</a>
+      </div>
+      <div class="plan best">
+        <span class="pill">Most popular</span>
+        <h3>Pro — Monthly</h3>
+        <div class="price">$19 <small>/ month</small></div>
+        <ul>
+          <li>Unlimited bulk copy, move and delete</li>
+          <li>Everything in Free</li>
+          <li>Use on up to 3 browsers</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <a class="btn btn-primary" id="buy-monthly" href="#pricing">Upgrade monthly</a>
+      </div>
+      <div class="plan">
+        <h3>Pro — Yearly</h3>
+        <div class="price">$190 <small>/ year</small></div>
+        <ul>
+          <li>Everything in Pro Monthly</li>
+          <li>2 months free</li>
+          <li>One invoice per year</li>
+        </ul>
+        <a class="btn btn-ghost" id="buy-yearly" href="#pricing">Upgrade yearly</a>
+      </div>
+    </div>
+    <p class="price-note">14-day money-back guarantee on your first payment — see our <a href="refund.html">refund policy</a>. After purchase you receive a license key by email; paste it in the extension’s Settings → Account.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap"><div class="faq">
+    <div class="sec-head"><span class="eyebrow">FAQ</span><h2>Questions admins ask.</h2></div>
+    <details><summary>Does it work with Salesforce Classic?</summary><p>No. It is built for Lightning Experience (the Reports list at <code>/lightning/o/Report/home</code>).</p></details>
+    <details><summary>Can I undo a delete?</summary><p>Yes, for 30 seconds with one click. After that, deleted reports stay in the Salesforce Recycle Bin for 15 days, and you also get a JSON backup file. Restoring from undo or backup creates new reports with the same settings; restoring from the Recycle Bin keeps the original ID.</p></details>
+    <details><summary>Do you store my Salesforce data?</summary><p>No. The extension talks directly to your Salesforce org from your browser. We do not run a server that receives your reports. See the <a href="privacy.html">privacy policy</a>.</p></details>
+    <details><summary>What permissions do I need in Salesforce?</summary><p>API access and permission to create, edit or delete the reports and folders you act on. The extension can’t do anything your Salesforce user can’t already do.</p></details>
+    <details><summary>Can my whole team use one license?</summary><p>One Pro license covers one person on up to 3 browsers. Each admin needs their own license.</p></details>
+    <details><summary>How do I cancel?</summary><p>Anytime, from the link in your receipt email or the “Manage subscription” button in Settings → Account. You keep Pro until the end of the period you paid for.</p></details></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff">Bulk Actions for Salesforce</strong><br>Contact: <a href="mailto:sfbulkactions@gmail.com">sfbulkactions@gmail.com</a></div>
+    <div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refund.html">Refunds</a></div>
+    <p class="disclaimer">Bulk Actions for Salesforce is an independent product and is not affiliated with, endorsed or sponsored by Salesforce, Inc. Salesforce, Lightning and related marks are trademarks of Salesforce, Inc.</p>
+  </div>
+</footer>
+</body>
+</html>

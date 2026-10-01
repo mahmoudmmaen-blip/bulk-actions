@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Bulk Actions for Salesforce</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&family=IBM+Plex+Mono:wght@600&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html"><span class="brand-mark">BA</span>Bulk Actions for Salesforce</a>
+  <nav class="nav-links" aria-label="Main"><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a><a class="btn btn-primary btn-sm" href="index.html#pricing">Get started free</a></nav>
+</div></header>
+<main class="wrap legal">
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: September 30, 2026</p>
+<p>This policy explains what the Bulk Actions for Salesforce browser extension and this website (“we”, “the extension”) collect, and what we do with it. In short: your Salesforce data stays between your browser and your Salesforce org.</p>
+
+<h2>1. Salesforce data</h2>
+<p>The extension connects to your own Salesforce org using OAuth 2.0 with PKCE. All requests (reading report lists, copying, moving, deleting and searching reports) go directly from your browser to Salesforce. We do not operate a server that receives, stores or processes your Salesforce data.</p>
+<ul>
+  <li><strong>Access and refresh tokens</strong> are stored encrypted (AES-GCM) in your browser’s extension storage and are never sent to us.</li>
+  <li><strong>We never see your Salesforce password.</strong> You sign in on Salesforce’s own login page.</li>
+  <li><strong>Backup files</strong> created before a delete contain report metadata (names, folders, columns, filters) and are saved only to your computer’s Downloads folder.</li>
+  <li><strong>Operation history</strong> (e.g. “Copied 3 reports”) is kept locally in your browser to show recent activity and count free-plan usage.</li>
+</ul>
+
+<h2>2. License and payments</h2>
+<p>Purchases are processed by Lemon Squeezy, our reseller and Merchant of Record. Lemon Squeezy collects your name, email, billing address and payment details under its own <a href="https://www.lemonsqueezy.com/privacy" rel="noopener">privacy policy</a>; we never receive your card details.</p>
+<p>To check a Pro license, the extension sends Lemon Squeezy’s license API: your license key and an activation name made of your Salesforce org name and org ID. This lets you see and manage which browsers use your license.</p>
+
+<h2>3. What we do not collect</h2>
+<p>No analytics or tracking scripts run in the extension. We do not sell or share personal data, and we do not use it for advertising.</p>
+
+<h2>4. Permissions the extension requests</h2>
+<div class="table-wrap"><table>
+<tr><th>Permission</th><th>Why</th></tr>
+<tr><td>Salesforce domains</td><td>Show the bulk-action tools on Salesforce pages and call the Salesforce REST API.</td></tr>
+<tr><td>identity</td><td>Run the Salesforce OAuth sign-in window.</td></tr>
+<tr><td>storage</td><td>Save settings, encrypted tokens and local history.</td></tr>
+<tr><td>downloads</td><td>Save the backup file before a delete.</td></tr>
+<tr><td>alarms</td><td>Refresh your Salesforce session and license status in the background.</td></tr>
+<tr><td>scripting, activeTab</td><td>Open the tools on the current Salesforce tab when you click the toolbar icon.</td></tr>
+<tr><td>api.lemonsqueezy.com</td><td>Activate and validate a Pro license key.</td></tr>
+</table></div>
+
+<h2>5. Your choices</h2>
+<p>Click “Disconnect” in the extension to revoke its Salesforce token, or remove the extension to delete all locally stored data. To ask about purchase records, contact us at the address below.</p>
+
+<h2>6. Contact</h2>
+<p>Questions about this policy: <a href="mailto:sfbulkactions@gmail.com">sfbulkactions@gmail.com</a>.</p>
+</main>
+<footer><div class="wrap">
+  <div><strong style="color:#fff">Bulk Actions for Salesforce</strong><br>Contact: <a href="mailto:sfbulkactions@gmail.com">sfbulkactions@gmail.com</a></div>
+  <div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refund.html">Refunds</a></div>
+  <p class="disclaimer">Bulk Actions for Salesforce is an independent product and is not affiliated with, endorsed or sponsored by Salesforce, Inc. Salesforce, Lightning and related marks are trademarks of Salesforce, Inc.</p>
+</div></footer>
+</body></html>

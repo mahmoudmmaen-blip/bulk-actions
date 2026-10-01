@@ -1,0 +1,137 @@
+/* Bulk Actions for Salesforce — marketing site
+   Palette: deep navy ink, cloud-blue accent, warm paper ground. */
+:root{
+  --ink:#0b1f3a; --ink-2:#324a6b; --muted:#5d6f87;
+  --paper:#f7f6f2; --card:#ffffff; --line:#e3e1da;
+  --accent:#0b6bcb; --accent-2:#0a4f99; --accent-soft:#e6f0fb;
+  --good:#1f7a4a; --danger:#b3261e;
+  --radius:14px;
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--body)}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;text-wrap:balance;margin:0}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);text-decoration:none}
+.brand-mark{width:30px;height:30px;border-radius:8px;background:var(--ink);color:#fff;display:grid;place-items:center;font:700 13px var(--mono)}
+.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.nav-links a{color:var(--ink-2);text-decoration:none;font-size:15px}
+.nav-links a:hover{color:var(--accent)}
+@media (max-width:640px){.nav-links a:not(.btn){display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;padding:12px 20px;font:600 15px var(--body);text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-2)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-sm{padding:8px 14px;font-size:14px}
+
+/* hero */
+.hero{padding-block:72px 40px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+@media (max-width:880px){.hero-grid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(34px,5.4vw,56px);margin-top:14px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p.lead{font-size:18px;color:var(--ink-2);max-width:52ch;margin:20px 0 28px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-note{font-size:14px;color:var(--muted);margin-top:14px}
+
+/* product mock (real UI, redrawn) */
+.mock{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 20px 50px rgba(11,31,58,.10);overflow:hidden;min-width:0}
+.mock-bar{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line);background:#fbfaf7}
+.mock-bar i{width:10px;height:10px;border-radius:50%;background:#dcd9d0}
+.mock-title{padding:14px 18px 6px;font-size:13px;color:var(--muted)}
+.mock-title b{display:block;font-size:20px;color:var(--ink);font-family:var(--display)}
+.mock table{width:100%;border-collapse:collapse;font-size:13.5px}
+.mock th{text-align:left;font-weight:600;color:var(--muted);padding:8px 18px;border-bottom:1px solid var(--line)}
+.mock td{padding:10px 18px;border-bottom:1px solid var(--line)}
+.mock tr.sel td{background:var(--accent-soft)}
+.chk{display:inline-block;width:15px;height:15px;border:1.5px solid #9aa7b8;border-radius:4px;vertical-align:-3px;margin-right:8px}
+.chk.on{background:var(--accent);border-color:var(--accent);position:relative}
+.chk.on::after{content:"";position:absolute;left:4px;top:1px;width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.mock-sel{margin:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:12px;padding:10px 12px;font-size:13px}
+.mock-sel b{margin-right:auto}
+.mock-sel span{border-radius:7px;padding:5px 10px;background:#fff;color:var(--ink);font-weight:600}
+.mock-sel span.p{background:var(--accent);color:#fff}
+.mock-sel span.d{background:var(--danger);color:#fff}
+
+/* stats strip */
+.strip{border-block:1px solid var(--line);background:var(--card)}
+.strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-block:26px}
+@media (max-width:700px){.strip .wrap{grid-template-columns:1fr}}
+.strip b{display:block;font:600 28px var(--display)}
+.strip span{color:var(--muted);font-size:14px}
+
+section{padding-block:72px}
+.sec-head{max-width:640px;margin-bottom:36px}
+.sec-head h2{font-size:clamp(28px,3.6vw,40px);margin-top:10px}
+.sec-head p{color:var(--ink-2);margin:12px 0 0}
+
+/* features */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:880px){.features{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.features{grid-template-columns:1fr}}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;min-width:0}
+.feat h3{font-size:20px;margin:12px 0 6px}
+.feat p{margin:0;color:var(--ink-2);font-size:15px}
+.feat .tag{font:600 11px var(--mono);letter-spacing:.06em;color:var(--accent);background:var(--accent-soft);padding:4px 8px;border-radius:6px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+.step{border-top:2px solid var(--ink);padding-top:16px}
+.step::before{counter-increment:s;content:"0" counter(s);font:600 14px var(--mono);color:var(--accent)}
+.step h3{font-size:20px;margin:8px 0 6px}
+.step p{margin:0;color:var(--ink-2);font-size:15px}
+
+/* pricing */
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+@media (max-width:880px){.pricing{grid-template-columns:1fr}}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:14px}
+.plan.best{border:2px solid var(--accent);box-shadow:0 16px 40px rgba(11,107,203,.14)}
+.plan h3{font-size:22px}
+.price{font:600 40px/1 var(--display)}
+.price small{font:400 15px var(--body);color:var(--muted)}
+.plan ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:15px;flex:1}
+.plan li{margin-bottom:6px}
+.pill{align-self:flex-start;font:600 12px var(--body);background:var(--accent);color:#fff;padding:4px 10px;border-radius:99px}
+.price-note{margin-top:18px;font-size:14px;color:var(--muted)}
+
+/* faq */
+.faq{max-width:760px}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--accent);font-weight:400;font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 0;color:var(--ink-2)}
+
+/* footer */
+footer{background:var(--ink);color:#c9d3e0;padding-block:40px;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+footer a{color:#fff;text-decoration:none;margin-right:18px}
+footer a:hover{text-decoration:underline}
+.disclaimer{flex-basis:100%;color:#8fa0b6;font-size:12.5px;border-top:1px solid #213a5c;padding-top:18px}
+
+/* legal pages */
+.legal{max-width:760px;padding-block:56px 80px}
+.legal h1{font-size:clamp(30px,4vw,42px)}
+.legal .updated{color:var(--muted);font-size:14px;margin:8px 0 32px}
+.legal h2{font-size:22px;margin:32px 0 8px}
+.legal p,.legal li{color:var(--ink-2)}
+.legal table{border-collapse:collapse;width:100%;font-size:15px}
+.legal td,.legal th{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.table-wrap{overflow-x:auto}
+.nav-links a.btn-primary{color:#fff}
+.nav-links a.btn-primary:hover{color:#fff}
